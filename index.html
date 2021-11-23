@@ -658,11 +658,7 @@
                 <p>hossa084@umn</p>
               </div>
 
-              <div class="phone">
-                <i class="bi bi-phone"></i>
-                <h4>Call:</h4>
-                <p>+1 651 3959934</p>
-              </div>
+            
 
              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d705.6496542663504!2d-93.2433171!3d44.9721493!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52b32d41c8c8f681%3A0x5ecfc3f2404918cc!2sU-Spatial!5e0!3m2!1sen!2sus!4v1636957608318!5m2!1sen!2sus" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
             </div>
@@ -671,32 +667,46 @@
 
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
 		  
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="row">
-                <div class="form-group col-md-6">
-                  <label for="name">Your Name</label>
-                  <input type="text" name="name" class="form-control" id="name" required>
-                </div>
-                <div class="form-group col-md-6">
-                  <label for="name">Your Email</label>
-                  <input type="email" class="form-control" name="email" id="email" required>
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="name">Subject</label>
-                <input type="text" class="form-control" name="subject" id="subject" required>
-              </div>
-              <div class="form-group">
-                <label for="name">Message</label>
-                <textarea class="form-control" name="message" rows="10" required></textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
-            </form>
+		  
+		  	  
+		  <form method="post" action="https://forms.un-static.com/forms/68186ace64be13267adedaebf63bc9af14913152">
+		  
+		  
+		                             
+			 <div class="form-group row">
+    <label for="name" class="col-4 col-form-label">Name</label>
+    <div class="col-8">
+      <div class="input-group">
+        <div class="input-group-addon">
+          <i class="fa fa-user"></i>
+        </div>
+        <input id="name" name="name" placeholder="Please enter your name" type="text" required="required" class="form-control">
+      </div>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="email" class="col-4 col-form-label">E-mail address</label>
+    <div class="col-8">
+      <div class="input-group">
+        <div class="input-group-addon">
+          <i class="fa fa-envelope"></i>
+        </div>
+        <input id="email" name="email" placeholder="Your e-mail address" type="text" required="required" class="form-control">
+      </div>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="message" class="col-4 col-form-label">Message</label>
+    <div class="col-8">
+      <textarea id="message" name="message" cols="40" rows="10" required="required" class="form-control"></textarea>
+    </div>
+  </div>
+  <div class="form-group row">
+   
+      <div class="text-center"><button name="submit" type="submit" class="btn btn-primary">Send Message</button></div>
+   
+  </div>
+</form>
 			
           </div>
 

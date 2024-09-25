@@ -241,6 +241,22 @@
     }
   });
 
+  function toggleReadMore(el) {
+  var parent = el.closest('.testimonial-item');
+  var moreText = parent.querySelector('.more-text');
+  
+  if (moreText.style.display === 'none' || moreText.style.display === '') {
+    moreText.style.display = 'inline';
+    el.innerHTML = 'Read less';
+    parent.classList.add('expanded');
+  } else {
+    moreText.style.display = 'none';
+    el.innerHTML = 'Read more';
+    parent.classList.remove('expanded');
+  }
+}
+
+
   /**
    * Animation on scroll
    */

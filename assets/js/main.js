@@ -240,19 +240,19 @@
       }
     }
   });
+function toggleText(id) {
+  var dots = document.getElementById("dots" + id);
+  var moreText = document.getElementById("more" + id);
+  var btnText = document.getElementById("myBtn" + id);
 
-  function toggleReadMore(el) {
-  var parent = el.closest('.testimonial-item');
-  var moreText = parent.querySelector('.more-text');
-  
-  if (moreText.style.display === 'none' || moreText.style.display === '') {
-    moreText.style.display = 'inline';
-    el.innerHTML = 'Read less';
-    parent.classList.add('expanded');
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more";
+    moreText.style.display = "none";
   } else {
-    moreText.style.display = 'none';
-    el.innerHTML = 'Read more';
-    parent.classList.remove('expanded');
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less";
+    moreText.style.display = "inline";
   }
 }
 

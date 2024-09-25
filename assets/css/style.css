@@ -365,7 +365,7 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Akills
+# Skills
 --------------------------------------------------------------*/
 .skills .progress {
   height: 60px;
@@ -643,6 +643,34 @@ section {
 /*--------------------------------------------------------------
 # Testimonials
 --------------------------------------------------------------*/
+/* Ensuring same-sized testimonial boxes */
+.testimonials .testimonial-item {
+  box-sizing: border-box;
+  min-height: 320px; /* Set a fixed height for all testimonial items */
+  max-height: 320px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.testimonials .testimonial-item.expanded {
+  max-height: none; /* Expand when read more is clicked */
+}
+
+.more-text {
+  display: none;
+}
+
+.read-more {
+  color: #149ddd;
+  cursor: pointer;
+  display: block;
+  margin-top: 10px;
+  text-align: right;
+  font-weight: 600;
+  font-size: 14px;
+}
+
 .testimonials .testimonials-carousel, .testimonials .testimonials-slider {
   overflow: hidden;
 }

@@ -97,7 +97,7 @@
   })
 
   /**
-   * Scrool with ofset on links with a class name .scrollto
+   * Scroll with offset on links with a class name .scrollto
    */
   on('click', '.scrollto', function(e) {
     if (select(this.hash)) {
@@ -115,7 +115,7 @@
   }, true)
 
   /**
-   * Scroll with ofset on page load with hash links in the url
+   * Scroll with offset on page load with hash links in the url
    */
   window.addEventListener('load', () => {
     if (window.location.hash) {
@@ -159,33 +159,29 @@
   }
 
   /**
-   * Porfolio isotope and filter
+   * Portfolio filtering using CSS Grid
    */
   window.addEventListener('load', () => {
-    let portfolioContainer = select('.portfolio-container');
+    const portfolioContainer = select('.portfolio-container');
     if (portfolioContainer) {
-      let portfolioIsotope = new Isotope(portfolioContainer, {
-        itemSelector: '.portfolio-item'
-      });
-
-      let portfolioFilters = select('#portfolio-flters li', true);
+      const portfolioFilters = select('#portfolio-flters li', true);
+      const portfolioItems = select('.portfolio-item', true);
 
       on('click', '#portfolio-flters li', function(e) {
         e.preventDefault();
-        portfolioFilters.forEach(function(el) {
-          el.classList.remove('filter-active');
-        });
+        portfolioFilters.forEach(el => el.classList.remove('filter-active'));
         this.classList.add('filter-active');
 
-        portfolioIsotope.arrange({
-          filter: this.getAttribute('data-filter')
-        });
-        portfolioIsotope.on('arrangeComplete', function() {
-          AOS.refresh()
+        const filter = this.getAttribute('data-filter');
+        portfolioItems.forEach(item => {
+          if (filter === '*' || item.classList.contains(filter)) {
+            item.classList.remove('hidden');
+          } else {
+            item.classList.add('hidden');
+          }
         });
       }, true);
     }
-
   });
 
   /**
@@ -233,7 +229,6 @@
         slidesPerView: 1,
         spaceBetween: 20
       },
-
       1200: {
         slidesPerView: 3,
         spaceBetween: 20
@@ -253,4 +248,4 @@
     })
   });
 
-})()
+})();
